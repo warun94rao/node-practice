@@ -6,7 +6,7 @@ const geocode = require('./utility/utility')
 const forecast = require('./utility/forecast')
 
 const app = express()
-
+const port = process.env.PORT || 3000
 
 // check how path.join works
 console.log(path.join(__dirname,'../../../'));
@@ -118,6 +118,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log("Express up and running in 3000")
+app.listen(port, () => {
+    console.log(`Express up and running in ${port}`)
 })
